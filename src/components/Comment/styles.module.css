@@ -1,31 +1,39 @@
-.comment{
-    width: 842px;
-    height: 150px;
+.comment {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    gap: 1rem;
     padding: 0 40px;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
 }
-.comment img{
+
+.comment img.avatar {
     width: 62.3px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.commentContent {
-    width: 766px;
-    height: auto;
+.commentBoxElike {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.commentBox {
+    width: 87%;
+    height: auto; 
     display: flex;
     flex-direction: column;
     background-color: #1C1C2F;
     border-radius: 8px;
-    gap: .625rem;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .commentHeader {
-    width: 766px;
-    height: 40px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,14 +42,74 @@
 .nomeEtempo{
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
-.commentHeader button{
-    width: 13.93px;
-    height: 15px;
-    background-image: url('../../assets/Trash.png');
-    object-fit: cover;
+.nome p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tempo p {
+    font-size: 14px;
+    color: #8C8C8C;
+    margin: 0;
+}
+
+.btnDelete {
+    background: none;
     border: none;
-    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnDelete img {
+    width: 24.81px;
+    height: 24px;
+}
+
+.texto {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #d1d5da;
+    margin-top: 0.5rem;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.likeButton, .likeButtonLiked {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.likeButton {
+    color: #DDDDDD; 
+}
+
+.likeButton:hover {
+    color: #007DFA;
+}
+
+.likeButton img {
+    width: 20px;
+    height: 20px;
+}
+
+.likeButtonLiked {
+    color: #007DFA;
+}
+
+.likeButtonLiked img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(80%) saturate(2972%) hue-rotate(200deg) brightness(97%) contrast(101%);
 }

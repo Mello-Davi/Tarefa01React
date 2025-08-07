@@ -1,4 +1,3 @@
-// Post/index.tsx
 import React, { useState } from 'react';
 import Form from '../Form';
 import styles from './styles.module.css';
@@ -8,10 +7,10 @@ import myProfilePhoto from '../../assets/davi.jpg'
 interface Comentario {
   id: number;
   nome: string;
-  tempo: string;
+  tempo: string; // ✅ Corrigido para 'string'
   comentario: string;
   likes: number;
-  foto: string; // ✅ Garantir que a foto está na interface
+  foto: string;
 }
 interface PostProps {
   nome: string;
@@ -29,13 +28,18 @@ export default function Post({ nome, cargo, tempoPublicacao, descricao, foto, co
   function handleCriarNovoComentario(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    if (!novoComentarioTexto.trim()) {
+        alert('Por favor, digite um comentário antes de enviar.');
+        return;
+    }
+
     const novoComentario = {
         id: comentarios.length > 0 ? Math.max(...comentarios.map(c => c.id)) + 1 : 1,
-        nome: 'Você', // Seu nome de usuário dinâmico
+        nome: 'Você',
         tempo: 'agora',
         comentario: novoComentarioTexto,
         likes: 0,
-        foto: myProfilePhoto // Sua foto de perfil
+        foto: myProfilePhoto
     };
 
     setComentarios([...comentarios, novoComentario]);
@@ -47,10 +51,10 @@ export default function Post({ nome, cargo, tempoPublicacao, descricao, foto, co
       setComentarios(comentariosSemODeletado);
   }
 
-  function handleLikeComment(commentId: number) {
+  function handleLikeComment(commentId: number, isLiking: boolean) {
       const comentariosComLike = comentarios.map(comment => {
           if (comment.id === commentId) {
-              return { ...comment, likes: comment.likes + 1 };
+              return { ...comment, likes: isLiking ? comment.likes + 1 : comment.likes - 1 };
           }
           return comment;
       });
@@ -86,10 +90,10 @@ export default function Post({ nome, cargo, tempoPublicacao, descricao, foto, co
             key={comentario.id}
             id={comentario.id}
             nome={comentario.nome}
-            tempo={comentario.tempo} // ✅ Passe a prop 'tempo'
-            texto={comentario.comentario} // ✅ Passe a prop 'texto'
+            tempo={comentario.tempo}
+            texto={comentario.comentario}
             likes={comentario.likes}
-            foto={comentario.foto} // ✅ A prop 'foto' do objeto de comentário
+            foto={comentario.foto}
             onDeleteComment={handleDeleteComment}
             onLikeComment={handleLikeComment}
           />

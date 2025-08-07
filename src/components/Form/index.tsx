@@ -1,5 +1,4 @@
-// Form/index.tsx
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 interface FormProps {
     onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
@@ -7,13 +6,13 @@ interface FormProps {
     onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-export default function Form({ onSubmit, value, onChange }: FormProps) {
-    return (
+export default function Form({ onSubmit, value, onChange }: FormProps){
+    return(
         <form className={styles.areaComentario} onSubmit={onSubmit}>
             <label htmlFor="comentario">Deixe seu feedback</label>
             <textarea
                 id="comentario"
-                placeholder='Parabéns, lobinho! Continue assim!'
+                placeholder='Escreva um comentário...' // Alterado o placeholder
                 value={value}
                 onChange={onChange}
             />

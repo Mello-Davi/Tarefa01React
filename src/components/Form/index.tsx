@@ -1,11 +1,23 @@
-import styles from './styles.module.css'
+// Form/index.tsx
+import styles from './styles.module.css';
 
-export default function Form(){
-    return(
-        <form className={styles.areaComentario}>
-        <label htmlFor="">Deixe seu feedback</label>
-        <textarea placeholder='Parabéns, lobinho! Continue assim!' />
-        <button>Comentar</button>
-      </form>
+interface FormProps {
+    onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+    value: string;
+    onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
+export default function Form({ onSubmit, value, onChange }: FormProps) {
+    return (
+        <form className={styles.areaComentario} onSubmit={onSubmit}>
+            <label htmlFor="comentario">Deixe seu feedback</label>
+            <textarea
+                id="comentario"
+                placeholder='Parabéns, lobinho! Continue assim!'
+                value={value}
+                onChange={onChange}
+            />
+            <button type="submit">Comentar</button>
+        </form>
     )
 }

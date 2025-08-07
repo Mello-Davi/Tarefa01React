@@ -1,0 +1,45 @@
+.areaComentario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6438rem;
+    padding: 0 40px;
+  }
+  
+  .areaComentario label {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter';
+  }
+  
+  .areaComentario textarea{
+    width: auto;
+    height: 112px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    background-color: #DDDDDD;
+  }
+  .areaComentario textarea::placeholder{
+    color: black;
+    font-family:'Inter';
+  }
+  
+  .areaComentario > button {
+    width: 139px;
+    height: 47.9px;
+    padding: 8px 16px;
+    background-color: #036FDB;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 44.88px;
+
+    &:hover{
+        background-color: #005ec4;
+    }
+  }

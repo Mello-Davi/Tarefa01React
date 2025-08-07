@@ -1,0 +1,9 @@
+.feed{
+    width: 921px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 29px;
+    margin-bottom: 89px;
+}

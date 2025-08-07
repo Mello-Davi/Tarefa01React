@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  background-color: #00274F;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  justify-content: center;
+}

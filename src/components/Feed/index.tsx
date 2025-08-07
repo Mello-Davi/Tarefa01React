@@ -1,9 +1,8 @@
-// Feed/index.tsx
 import Post from '../Post'
 import styles from './styles.module.css'
 import thaisPhoto from '../../assets/perfis/thaisGomes.jpg'
 import ricardoFoto from '../../assets/perfis/ricardoSiqueira.jpg'
-import felyppePhoto from '../../assets/perfis/felyppeNunes.jpg' // Importe as fotos aqui
+import felyppePhoto from '../../assets/perfis/felyppeNunes.jpg'
 import mellanyPhoto from '../../assets/perfis/mellanyCarter.jpg'
 import jessyPhoto from '../../assets/perfis/jessyLogan.jpg'
 
@@ -42,7 +41,7 @@ const ricardo = {
             foto: mellanyPhoto
         },
         {
-            id: 3, // Corrigido o ID duplicado
+            id: 3,
             nome: 'Jessy Logan',
             tempo: '2h',
             comentario: 'Est aspernatur quis eos natus dicta et internos',

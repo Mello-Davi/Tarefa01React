@@ -12,7 +12,7 @@ export default function Form({ onSubmit, value, onChange }: FormProps){
             <label htmlFor="comentario">Deixe seu feedback</label>
             <textarea
                 id="comentario"
-                placeholder='Escreva um comentário...' // Alterado o placeholder
+                placeholder='Escreva um comentário...'
                 value={value}
                 onChange={onChange}
             />

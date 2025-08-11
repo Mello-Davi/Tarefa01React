@@ -7,7 +7,7 @@ import myProfilePhoto from '../../assets/davi.jpg'
 interface Comentario {
   id: number;
   nome: string;
-  tempo: string; // ✅ Corrigido para 'string'
+  tempo: string; 
   comentario: string;
   likes: number;
   foto: string;

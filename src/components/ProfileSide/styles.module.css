@@ -33,11 +33,11 @@
   .profilePhoto {
     width: 115px;
     height: 115px;
-    background-image: url(../../assets/davi.jpg); /* troque para o avatar correto */
+    background-image: url(../../assets/davi.jpg); 
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 5px solid #004B96; /* borda azul */
+    border: 5px solid #004B96; 
   }
   
   .descricao {
